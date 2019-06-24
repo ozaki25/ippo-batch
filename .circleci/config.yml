@@ -12,7 +12,7 @@ workflows:
   execute-workflow:
     triggers:
       - schedule:
-          cron: '21 * * * *'
+          cron: '0  * * *'
           filters:
             branches:
               only:
