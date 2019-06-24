@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  execute:
+    docker:
+      - image: node:10
+    steps:
+      - checkout
+      - run: yarn install
+      - run: yarn start
+workflows:
+  version: 2
+  execute-workflow:
+    triggers:
+      - schedule:
+          cron: '0 * * * *'
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - execute
