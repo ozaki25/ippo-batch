@@ -2,5 +2,8 @@
   "name": "ippo-batch",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer": "^1.18.0"
+  }
 }
