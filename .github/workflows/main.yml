@@ -1,0 +1,19 @@
+name: Main
+on:
+  schedule:
+    - cron: '0 0,3,6,9,12,15,18,21 * * *'
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    steps
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: install
+        run: |
+          yarn install
+      - name: run
+        run: |
+          yarn start
