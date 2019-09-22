@@ -17,3 +17,5 @@ jobs:
       - name: run
         run: |
           yarn start
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
