@@ -11,11 +11,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: install
-        run: |
-          yarn install
-      - name: run
-        run: |
-          yarn start
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
+#       - name: install
+#         run: |
+#           yarn install
+#       - name: run
+#         run: |
+#           yarn start
+#         env:
+#           BASE_URL: ${{ secrets.BASE_URL }}
